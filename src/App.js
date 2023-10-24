@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css"; 
 import WeatherList from "./WeatherList";
 import './styles.css';
 
