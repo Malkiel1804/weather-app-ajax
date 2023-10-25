@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
-export default function WeatherList() {
-  let [city, setCity] = useState("");
+export default function WeatherList(props) {
+  let [city, setCity] = useState(props.defaultCity);
   let [result, setResult] = useState(false);
   let [weather, setWeather] = useState({});
 
@@ -14,6 +15,9 @@ export default function WeatherList() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      date: new Date(response.data.dt * 1000),
+      city: response.data.name,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}`,
     });
   }
 
@@ -43,16 +47,9 @@ export default function WeatherList() {
 
   if (result) {
     return (
-      <div>
+      <div className="Weather">
         {form}
-        <div className="list">
-          <ul>
-            <li>Temperature: {weather.temperature}°C</li>
-            <li>Description: {weather.description}</li>
-            <li>Humidity: {weather.humidity}%</li>
-            <li>Wind: {weather.wind}km/h</li>
-          </ul>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {

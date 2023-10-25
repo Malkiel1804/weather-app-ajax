@@ -9,9 +9,6 @@ export default function App() {
       <div className="container">
         <header className="App-header">
           <h1>Weather App</h1>
-          <h2>
-            <strong>Hello my name is Lara</strong>
-          </h2>
         </header>
         <WeatherList />
         <footer>
@@ -23,14 +20,15 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>{" "}
-          and{" "}
+          and hosted on{" "}
           <a
             href="https://jovial-meringue-281cb7.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            hosted on Netlify.
+            Netlify
           </a>
+          .
         </footer>
       </div>
     </div>

@@ -13,13 +13,13 @@ h1 {
   font-size: 50px;
 }
 
-.list ul {
-  list-style-type: none;
+li {
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.list li {
-  font-weight: 400;
-  font-size: 25px;
+ul {
+list-style-type: none;
 }
 
 .form {
