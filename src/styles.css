@@ -1,16 +1,16 @@
-body,
-h1 {
-  font-family: monospace;
+body {
   text-align: center;
-  margin: 60px auto;
-  line-height: 35px;
+  margin-top: 90px;
 }
 
 h1 {
+  font-family: monospace;
+  padding: 10px;
+  line-height: 35px;
   text-align: center;
   font-weight: 900;
-  margin: 20px 0 10px;
-  font-size: 50px;
+   margin: 20px 0 10px;
+  font-size: 60px;
 }
 
 li {
@@ -24,4 +24,10 @@ list-style-type: none;
 
 .form {
   padding: 20px;
+}
+
+.WeatherContainer {
+  margin: 20px;
+  font-size: 20px;
+  font-family: monospace;
 }

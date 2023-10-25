@@ -6,14 +6,14 @@ import "./styles.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
+      <CurrentDate date={props.data.date} />
       <h1>{props.data.city}</h1>
-     <CurrentDate date={props.data.date} />
-      <ul>
-        <li className="text-capitalize">{props.data.description}</li>
+      <div className="WeatherContainer">
+        <div className="text-capitalize">{props.data.description}</div>
         <WeatherTemperature celsius={props.data.temperature} />
-        <li>Humidity: {props.data.humidity}%</li>
-        <li>Wind: {props.data.wind} km/h</li>
-      </ul>
+        <div>Humidity: {props.data.humidity}%</div>
+        <div>Wind: {props.data.wind} km/h</div>
+      </div>
     </div>
   );
 }
