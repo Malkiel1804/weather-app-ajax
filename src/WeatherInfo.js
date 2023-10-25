@@ -1,6 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
-import WeatherTemperature from "./WeatherTemperature";
+import UnitConversion from "./UnitConversion";
 import "./styles.css";
 
 export default function WeatherInfo(props) {
@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
       <h1>{props.data.city}</h1>
       <div className="WeatherContainer">
         <div className="text-capitalize">{props.data.description}</div>
-        <WeatherTemperature celsius={props.data.temperature} />
+        <UnitConversion celsius={props.data.temperature} />
         <div>Humidity: {props.data.humidity}%</div>
         <div>Wind: {props.data.wind} km/h</div>
       </div>
