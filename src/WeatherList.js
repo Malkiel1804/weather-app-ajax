@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./styles.css";
 
 export default function WeatherList(props) {
@@ -17,7 +18,8 @@ export default function WeatherList(props) {
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}`,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      coord: response.data.coord,
     });
   }
 
@@ -50,6 +52,7 @@ export default function WeatherList(props) {
       <div className="Weather">
         {form}
         <WeatherInfo data={weather} />
+        <WeatherForecast coordinates={weather.coord} />
       </div>
     );
   } else {
