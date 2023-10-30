@@ -1,5 +1,5 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+import ReactAnimatedWeather from "react-animated-weather"; 
 
 const codeMapping = {
   "01d": "CLEAR_DAY",
