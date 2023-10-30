@@ -18,7 +18,7 @@ export default function WeatherList(props) {
       wind: Math.round(response.data.wind.speed),
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       coord: response.data.coord,
     });
   }
