@@ -8,10 +8,10 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <CurrentDate date={props.data.date} />
-      <WeatherIcon code={props.data.icon} />
       <h1>{props.data.city}</h1>
       <div className="WeatherContainer">
         <div className="text-capitalize">{props.data.description}</div>
+        <WeatherIcon code={props.data.icon} />
         <br />
         <UnitConversion celsius={props.data.temperature} />
         <div>Humidity: {props.data.humidity}%</div>
